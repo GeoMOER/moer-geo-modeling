@@ -9,17 +9,20 @@ library(fpc)           # flexible (optimal) procedure for clustering alternative
 library(NbClust)       # optimal number of clusters alternative 2
 library(factoextra)    # optimal number of clusters alternative 3
 library(optCluster)    # optimal number of clusters alternative 4
-library(viridis)
-library(ggplot2)
-library(scales)
+library(viridis)       # color palette
+library(scales)        # scaling the axis
 library(gridExtra)
 library(FactoMineR)
 library(factoextra)
 library(ggpubr)
+library(ggplot2)      
 theme_set(theme_pubr())
 
-#-- DATA new
+#-- read DATA
 data=read.csv2("assessment_matrix.csv",sep = "",header = TRUE,row.names = 1)
+
+# list of groups  and number of members for the bubbleplots  
+plt_lst=c("all_15","female_4","male_8","mix_3","bachelor_7","teacher_8")
 
 set.seed(123)
 
@@ -199,9 +202,6 @@ mix     = t_data %>% group_by(levels, dimensions)%>% filter(sex == "mix")%>%  su
 bachelor= t_data %>% group_by(levels, dimensions)%>% filter(degree.program == "B")%>%  summarize(count=n())
 teacher = t_data %>% group_by(levels, dimensions)%>% filter(degree.program == "T")%>%  summarize(count=n())
 
-#list of data to bubble plot the number of groups is manually added 
-plt_lst=c("all_15","female_4","male_8","mix_3","bachelor_7","teacher_8")
-
 # create ggplot bubbleplots 
 for (plt in plt_lst){
   split=strsplit(plt,"_")
@@ -215,5 +215,5 @@ cowplot::plot_grid(plotlist = lapply(paste0("g_",plt_lst), function(x) {eval(par
                    ncol = 2,nrow = 3)
 
 # ordination plots
-res.ca <- CA(data[1:4], graph = FALSE)
-fviz_ca_biplot(res.ca, repel = TRUE)
+res.ca <- FactoMineR::CA(data[1:4], graph = FALSE)
+factoextra::fviz_ca_biplot(res.ca, repel = TRUE)
