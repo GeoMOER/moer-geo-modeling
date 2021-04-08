@@ -599,9 +599,9 @@ ticks
 
 BUTTON
 210
-15
+30
 315
-48
+63
 NIL
 setup
 NIL
@@ -616,9 +616,9 @@ NIL
 
 BUTTON
 330
-15
+30
 435
-48
+63
 go
 go
 T
@@ -633,14 +633,14 @@ NIL
 
 SLIDER
 10
-115
+215
 155
-148
+248
 walker-vision-dist
 walker-vision-dist
 1
 200
-19.0
+48.0
 1
 1
 NIL
@@ -653,15 +653,15 @@ SWITCH
 413
 show-goal
 show-goal
-1
+0
 1
 -1000
 
 CHOOSER
 15
-410
+560
 145
-455
+605
 p_color
 p_color
 "red" "orange" "grey" "green"
@@ -669,9 +669,9 @@ p_color
 
 BUTTON
 15
-460
+475
 145
-500
+515
 NIL
 draw-world-items
 T
@@ -686,9 +686,9 @@ NIL
 
 SLIDER
 10
-80
+180
 155
-113
+213
 n-walker
 n-walker
 1
@@ -701,9 +701,9 @@ HORIZONTAL
 
 SLIDER
 10
-150
+250
 155
-183
+283
 walker-v-angle
 walker-v-angle
 1
@@ -721,7 +721,7 @@ SWITCH
 373
 vis-vision
 vis-vision
-1
+0
 1
 -1000
 
@@ -732,14 +732,14 @@ TEXTBOX
 351
 -------runtime visualisation-------
 15
-0.0
+14.0
 1
 
 TEXTBOX
 0
-355
+455
 170
-391
+491
 ----------drawing----------
 15
 12.0
@@ -757,25 +757,25 @@ count-of-trampling
 10
 
 CHOOSER
-15
-545
-145
-590
+10
+110
+155
+155
 preset-roads
 preset-roads
 "triangle" "square" "X" "none"
-3
+1
 
 SLIDER
-15
-510
-145
-543
+10
+75
+155
+108
 road-width
 road-width
 1
 6
-1.0
+6.0
 1
 1
 NIL
@@ -800,16 +800,16 @@ CHOOSER
 selected-experiment
 selected-experiment
 "none" "orange-goals" "street-goals" "Y" "houseOfSantaClaus" "square"
-5
+2
 
 TEXTBOX
 10
 10
 465
 28
------- scenarios-------
+------ Scenarios-------
 15
-0.0
+12.0
 1
 
 SWITCH
@@ -825,20 +825,20 @@ vis-pop
 
 SWITCH
 10
-185
+285
 155
-218
+318
 max-pop
 max-pop
-1
+0
 1
 -1000
 
 INPUTBOX
 10
-220
+320
 80
-280
+380
 pop-lowlimit
 1.0
 1
@@ -847,9 +847,9 @@ Number
 
 INPUTBOX
 85
-220
+320
 155
-280
+380
 roads-pop
 2000.0
 1
@@ -909,9 +909,9 @@ PENS
 
 BUTTON
 330
-50
+65
 435
-83
+98
 go-once
 go
 NIL
@@ -926,9 +926,9 @@ NIL
 
 BUTTON
 195
-105
+120
 315
-138
+153
 remove walkers
 die
 NIL
@@ -943,9 +943,9 @@ NIL
 
 BUTTON
 195
-185
+200
 315
-218
+233
 rescale pop
 let pmax max [popularity] of patches\nlet llim patches  with [popularity >= pop-lowlimit]\nask llim with [pcolor != orange  and pcolor != red]\n[ set pcolor scale-color magenta popularity pop-lowlimit pmax ]\n
 NIL
@@ -960,9 +960,9 @@ NIL
 
 BUTTON
 195
-145
+160
 315
-178
+193
 drop lowlim pop
 \n   let llim patches  with [popularity <= pop-lowlimit]\n   ask llim with [pcolor != orange and pcolor != red][set pcolor green]\n
 NIL
@@ -977,19 +977,19 @@ NIL
 
 TEXTBOX
 225
-85
+100
 435
-111
+136
 ----------------Helpers---------------
-12
-0.0
+15
+15.0
 1
 
 BUTTON
 325
-145
+160
 450
-178
+193
 export world
 export-world (word \"export-world \" behaviorspace-experiment-name behaviorspace-run-number \".csv\")\n
 NIL
@@ -1004,9 +1004,9 @@ NIL
 
 BUTTON
 325
-185
+200
 450
-218
+233
 export distribution
 export-plot \"number of patches\"  (word \"export-plot \" behaviorspace-experiment-name behaviorspace-run-number \"_number-of-patches_decentile.csv\")
 NIL
@@ -1021,9 +1021,9 @@ NIL
 
 BUTTON
 325
-105
+120
 450
-138
+153
 export scaled view
 let pmax max [popularity] of patches\nlet llim patches  with [popularity >= pop-lowlimit]\nask llim with [pcolor != orange  and pcolor != red]\n[ set pcolor scale-color magenta popularity pop-lowlimit pmax ]\nask turtles [die]\nexport-view user-new-file \n\n
 NIL
@@ -1055,9 +1055,9 @@ NIL
 
 SLIDER
 15
-375
+525
 145
-408
+558
 line-width
 line-width
 1
@@ -1070,9 +1070,9 @@ HORIZONTAL
 
 SWITCH
 10
-285
+385
 155
-318
+418
 line-not-cone
 line-not-cone
 1
@@ -1081,9 +1081,9 @@ line-not-cone
 
 SLIDER
 10
-320
+420
 155
-353
+453
 dist-diff
 dist-diff
 1
@@ -1093,6 +1093,16 @@ dist-diff
 1
 NIL
 HORIZONTAL
+
+TEXTBOX
+25
+160
+175
+178
+----- Settings-----
+15
+12.0
+1
 
 @#$#@#$#@
 # _Hikers, there is no road, you make your way on foot<sup>*</sup>_ - Self-organization of trails in space.
