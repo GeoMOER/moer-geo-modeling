@@ -720,10 +720,10 @@ TEXTBOX
 1
 
 MONITOR
-1005
-15
-1137
-56
+1010
+35
+1142
+76
 count pop >=  lowlimit
 count-of-trampling
 0
@@ -831,10 +831,10 @@ roads-pop
 Number
 
 MONITOR
-1005
-105
-1135
-146
+1010
+125
+1140
+166
 average popularity
 popularity-average
 0
@@ -842,10 +842,10 @@ popularity-average
 10
 
 MONITOR
-1005
-150
-1135
-191
+1010
+170
+1140
+211
 max-popularity
 popularity-maximum
 0
@@ -853,10 +853,10 @@ popularity-maximum
 10
 
 MONITOR
-1005
-60
-1135
-101
+1010
+80
+1140
+121
 countl min pop
 count-of-popularity-minimum
 0
@@ -864,10 +864,10 @@ count-of-popularity-minimum
 10
 
 PLOT
-1150
-15
-1510
-190
+1155
+35
+1515
+210
 number of patches
 decentile
 count
@@ -1048,6 +1048,16 @@ TEXTBOX
 455
 36
 ------------------ Control --------------------
+12
+0.0
+1
+
+TEXTBOX
+1145
+10
+1295
+26
+-------visualisation-------
 12
 0.0
 1
@@ -1245,221 +1255,6 @@ Hypothesis 1 was examined with the model runs _run\_1, run\_5, run\_6, run\_7_. 
 With the _run\_3_ and _run\_4_ runs, it can be shown that curved and wider paths emerge depending on the number of step patches visible to the actors. These paths are not optimized with respect to their distance between target points. Their location in space is obviously dependent on the random initial distribution of actors (_run\_3_) and becomes more stably reproducible with increasing perceptual range or number of actors (_run\_4_). Based on this observation, Hypothesis 2 can also be confirmed, as trampling paths converge more strongly with increasing perceptual reach and expand into shared paths, additional side paths, and further path structures.
 
 Based on these observations, it can be concluded that the present model is able to reliably reproduce the structures observed also by other authors (cf. Molnar 1997, Helbing 1997) and seems suitable as a basis for further questions such as barriers or more complex spatial structures.
-
-
-
-## References 
-1. Bossel, H, (2004), Systems, dynamics, simulation : model building, analysis and simulation of complex systems. Norderstedt, Books on Demand GmbH.
-1. Feistel,R. & Ebeling, W. (1989), Evolution of Complex Systems. Self-Organization, Entropy and Development. Kluwer, Dordrecht,1989.
-1. Gilbert N. & S. Bankes (2002), Platforms and methods for agent-based modeling. Proc. Natl. Acad.Sci. USA 99. suppl 3.
-1st Grider, R. and U. Wilensky, U. (2015). NetLogo Paths model. (http://ccl.northwestern.edu/netlogo/models/Paths). Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
-1. Helbing D., Keltsch & P. Molnar (1997), Modeling the evolution of human trail systems Nature Vol. 388.
-1. Henderson L.F. /1974), On the fluid mechanics of human crowd motion, Transportation Research, Volume 8, Issue 6, 1974, Pages 509-515 [DOI](https://doi.org/10.1016/0041-1647(74)90027-6).
-1. <sup>*</sup> Machado A.: "Campos de Castilla", 1917, cited in [URL](http://falschzitate.blogspot.com/2018/04/wege-entstehen-dadurch-dass-wir-sie.htm), accessed 28 Jan 2020.
-1st Luhmann, N., (1984), Social systems: outline of a general theory, Frankfurt, Suhrkamp.
-1. Molnar P. (1995), Modeling and simulation of the dynamics of pedestrian flows (PhD), [URL](http://www.cis.cau.edu/~pmolnar/dissertation/dissertation.html)
-1. scraper C. (2006), Space Syntax as a tool for the analysis of urban space and human locomotion in public space with special reference to rail-based transport systems.   The example of the Leipzig city tunnel. Master thesis. [URL](https://e-pub.uni-weimar.de/opus4/frontdoor/deliver/index/docId/2112/file/SCHABER+2007+-+Space+Syntax+as+tool_pdfa.pdf), Accessed: 28.01.2020.
-1st Schenk M. (1999), Optimization principles of human locomotion. [URL](https://books.google.de/books?id=lJzgxgEACAAJ)Accessed: 01/28/2020.
-1. Teahan T. (2010a), Artificial Intelligence: Exercises - Agents and Environments, Ventus Publishing ApS, ISSBN 978-87-7681-591-2, [URL](https://library.ku.ac.ke/wp-content/downloads/2011/08/Bookboon/IT,Programming%20and%20Web/artificial-intelligence-exercises-i.pdf), Accessed: 28.01.2020
-1. Teahan T. (2010b), Artificial Intelligence: Exercises - Agent Behaviour I, Ventus Publishing ApS, ISBN 978-87-7681-592-9, [URL](https://library.ku.ac.ke/wp-content/downloads/2011/08/Bookboon/IT,Programming%20and%20Web/artificial-intelligence-exercises-ii.pdf), Accessed: 28.01.2020
-1. Thiele J. C., Kurtha W. & V. Grimm (2014), Facilitating Parameter Estimation and Sensitivity Analysis of Agent-Based Models: A Cookbook Using NetLogo and R, Journal of Artificial Societies and Social Simulation 17 (3) 11, [URL](http://jasss.soc.surrey.ac.uk/17/3/11.html), [DOI](DOI:10.18564/jasss.2503), accessed: 28.01.2020
-1. Uhrmacher A. M. & D. Weyns (2009), Multi-Agent Systems: Simulation and Applications. (CRC Press, Inc., Boca Raton, FL, USA, 7.
-1. Wilensky, U. (1999). NetLogo. (http://ccl.northwestern.edu/netlogo/), Center for Connected Learning and Computer-Based Modeling, Northwestern University, Evanston, IL.
-
-
-
-
-# _hikers, there is no road, you make your way on foot<sup>*</sup>_ - self-organization of trails in space.
-
-Rieke Ammoneit and Chris Reudenbach 2020
-
-## Introduction
-
-Spatially active actors must use and develop these very spaces. If this use happens regularly, paths are created. These facilitate and optimise the use of the earth-bound space, whether operationalised in the form of roads and paved paths or unregulated as trails, paths or the like. Where there is no regular infrastructure, this is done through community use or, to put it with the Spanish poet Antonio Machado: "Wanderer, there is no road, you make your way on foot"_ [Machado 1917].
-
-According to Helbig (Helbing 1997), there is a broad interest in a deeper understanding of this process across a wide range of disciplines, including urban planning, traffic planning, archaeology, geography and systems research. The abstraction of such systems and the modeling derived from it can theoretically be founded in the self-organization of systems and the resulting ermergent structures (Luhmann 1984). In simple terms, paths (as Senor Machado says) arise through the interaction of the actor and his intentions to move with a given space.
-
-Especially in the planning environment, e.g. in the case of new planning or replanning of districts, parks, etc., the question of _good_ or _organic_ paths often arises [Molnar 1995, Schenk 1999 Schaber 2006]. In this context, _good_ paths should be defined as paths that are accepted and actively used by pedestrians and other users of the space. If such paths are not regularly available or are not perceived as useful, _wild_ paths are often created **tramp paths**, since actors use these paths and stabilize them into a path by an unspoken common preference for frequently used routes. 
-
-In the present study, the spontaneous formation of trampling paths in a simple isomorphic space will be investigated. In particular, whether and to what extent the Anazhl and the perceptiveness of the actors have an effect on the emerging path patterns. Model systems such as NetLogo are particularly suitable for this purpose, as they offer a simple software-based access to the programming and validation of agent-based processes in space (Uhrmacher & Weyns 2009, Gilbert & Bankes 2002, Wilensky 1999).
-
-## Question and hypothesis
-The introductory basic observation that trails along jointly traveled routes are self-organised is based on the tendency to optimise paths between a 'here' and 'there'. It is also observed that other actors, once such tracks are visible, tend to use them, which in turn increases the visibility of the footprints (cf. Molnar 1997, Helbing 1997). From the individual footprints, the apparently specific rules will then follow. The concrete question of this investigation is therefore: Do paths emerge from the users' tendency to use already visible footprints and to what extent does the structure of the paths depend on the users' perception?
-
-The following hypotheses are put forward for the investigation:
-
-1. if the actors orientate themselves by the level of popularity of a tramp path patch, then (1) the connections between targets are shorter, (2) more direct point-to-point paths are created and fewer tramp path patches are created than when orienting themselves by any tramp path patch. 
-
-2. the more far-reaching the perception of the actors is, the (1) more paths converge to shared paths with (2) more secondary paths and (3) more trampling path patches than under (1)
-
-## Methods
-For abstraction and modeling, the following **word model** is drawn up from the above question (Bossel 2004):
-
-    "In the case of randomly given fixed targets in an isomorphic space, an
-     approximate linear (direct) connection between these objectives by repeated
-     Using the same tread patches can create a trail. This direct path
-     will be modified if the inclination of the actors is to change existing sections of the
-     the path to the goal increases. The more of these paths are available and
-     can be seen, the stronger a change of the straight paths to
-     ...are more arched or curved paths."
-
-### Basic conditions of the model run
-
-### General conditions of the model run
-
-The hypothesis check is to be carried out with the help of an iterative change of the relevant parameters visibility and poularity weighting. In principle, the approach of a sensitivity study is suitable for this (Thiele et al. 2014). Using a systematic study, reproducible spatial conditions (see Figure 1) are repeated with a complete combination of different actor settings in a defined number. It is expected that specific and comparable spatial structures are created for the respective parameter combinations.
-
-### Goals and space
-The actor space is defined by the positioning of the vertices of an equilateral triangle slightly rotated on an isomorphic surface (green) (see a. Helbing (1997)). (see figure 1).
-
-Spatial positions of the experiment triangle.](images/abb1.png)
-Figure 1: Spatial positions of the experiment. The orange vertices of the triangle (circled in red) are the mutually assigned targets. Green areas are grassland. Footprints and agents are not shown.
-
-### Rules from the word model
-The following rules are derived from the above word model:
-
-#### The actors (walkers) act according to the following rules:
-
-* always have a known goal
-* try to reach this goal in a direct way
-* identify, for each step, whether a footprint in the direction of the target is visible
-* if yes and so the way to the destination is shortened, choose the direction to one of these footprints 
-
-#### The room units (patches) have the following properties:
-
-* Use (grassland [green], footprint [grey depending on popularity], destination [orange])
-
-#### The following interaction (processes) take place:
-
-* The attraction (_popularity_) of a footprint is enhanced by one point each time an actor enters it. Above a defined threshold value of _popularity_ grassland becomes a visible footprint.
-
-
-### The Netlogo model 
-The developed NetLogo model _"paths-simulater-2019"_ is a further development of the NetLogo library model _"paths"_ (Grider & Wilensky 2015). The optimization function for path finding (_best-way-to_) implemented there has been extended by the functionality to select by maximum popularity. The algorithm analyzes the distance to the target and within a defined viewing radius the distance to a step pack that shortens the path to the target (if available). If a step patch is available, it is activated. For the present study, the target scenario _Y_ shown in figure 1 was implemented and used in accordance with Helbing (1997) space setting (see figure 1). 
-
-For practical implementation the Behaviour Space tool of the NetLogo programming environment is used. The Behaviour Space scripts _"run_1_2_Y"_, _"run_3_4_Y"_ and _"run_5-7_Y"_ integrated in this model file start a total of 35 model runs, which form the basis of the investigation. (see table 1).
-
-The simulations are carried out for each scenario in 5-fold repetition, each with ten actors randomly assigned to the model world. The actors strive for the target points, which are also randomly assigned. When they reach the next target, a new target is drawn. For the exact setting for each simulation, please refer to the Behaviour Space.
-
-Table 1: Matrix of the model run parameters. Each model run was repeated 5 times. See also figure panels 2, 3 and 4.
-
-<table style="width:90%">
-    <tr>
-        <td><b></td>
-        <td><b>run_1</td>
-        <td><b>run_2</td>
-        <td><b>run_3</td>
-        <td><b>run_4</td>
-        <td><b>run_5</td>
-      <td><b>run_6</td>
-        <td><b>run_7</td>
-    </tr>
-    <tr>
-        <td><b>n-walkers</td>
-         <td>10</td>
-         <td>50</td>
-         <td>10</td> 
-        <td>10</td>
-         <td>10</td>
-        <td>10</td>
-         <td>10</td>
-    </tr>
-    <tr>
-        <td><b>walker-vis-dist</td>
-         <td>1</td>
-         <td>1</td>
-         <td>25</td>
-         <td>50</td>
-         <td>1</td> 
-         <td>25</td>
-         <td>50</td>
-    </tr>
-    <tr>
-        <td><b>max-pop</td>
-         <td>false</td>
-         <td>false</td>
-         <td>false</td>
-         <td>false</td> 
-         <td>true</td>
-         <td>true</td> 
-         <td>true</td>
-    </tr>
-</table>
-
-
-
-
-## Results 
-The simulation runs were iterated over 2500 time steps and then aborted. No new path structures were created in any of the model runs at this time. 
-
-Since it is easy to see in _run\_1 and _run\_2_ that the basic patterns of patches with a _popularity_ > _min-poplimit_ are qualitatively consistent, the runs listed in Table 1 are shown as examples. This neglects the observation that, with few actors and a limited view (see _run\_3_), qualitatively similar and comparable patterns emerge, but that they vary greatly in their final form and, above all, in their spatial location. This spatial effect is due to the initial distribution of the actors and it may be assumed that, if the distribution is evenly distributed in space, the patterns remain spatially stable even for runs with more limited perception.  
-
-### Model runs 1 and 2 - Focused orientation
-
-Figure panel 2 shows _run\_1_ and _run\_2_ (see Table 1). Both runs have been performed with a minimum _walker-vis-dist_ with the value **1**. The path patterns between the target points, which are in fact linear and identical, can be clearly seen for frequencies of entry greater than the _min-poplimit_ threshold. The distribution of _popularity_ is also clearly visible, with a massive peak in the first decile and then producing a slight second peak in the 7 to 9 deciles. The first peak is produced by patches that are rarely entered, while the second peak is produced by patches with high (the paths themselves) but not the highest (before the turning points and "corner kick patches" on the paths) _popularity_ values of the patches. 
-
-![model runs 1 and 2]( images/abb2.png)
-
-Figure 2: Model run 1 and 2 with : walker-vision-dist = 1, n-walkers = 10/50, max-pop = false, repeat runs 1-5. black patches have been _= min-poplimit_ frequently entered. Larger _min-poplimit_ the color magenta to white is scaled according to the value range from _maximum-popularity_.
-
-The black patches show an entry frequency equal to the _min-poplimit_ threshold. They mainly mark the way of the walker to the first destination. It can be expected (assuming a repetition >> 5) that this proportion will stabilize and be similar to patches with a _popularity_ higher than the _min-poplimit_ threshold over many simulations. However, the dependence on the initial spatial distribution of the actors is also evident here. This assumption is confirmed by the quotients of the ratio of _popularity = min-poplimit_ **/** _popularity > min-poplimit_. 
-
-Table 2: Matrix of quotients of _popularity = min-poplimit_ **/** _popularity > min-poplimit_ (pop-ratio)
-
-
-<table style="width:90%">
-    <tr>
-        <td><b></td>
-        <td><b>run_1_1</td>
-        <td><b>run_1_2</td>
-        <td><b>run_1_3</td>
-        <td><b>run_1_4</td>
-        <td><b>run_1_5</td>
-        <td><b>run_2_1</td>
-        <td><b>run_2_2</td>
-        <td><b>run_2_3</td>
-        <td><b>run_2_4</td>
-        <td><b>run_2_5</td> </tr>
-    <tr>
-        <td><b>pop-ratio</td>
-         <td>0.965</td>
-         <td>0.796</td>
-         <td>0.958</td> 
-        <td>1.027</td>
-         <td>1.033</td>
-        <td>0.429</td>
-         <td>0.450</td>
-        <td>0.579</td>
-         <td>0.600</td>
-        <td>0.578</td>
-    </tr>
-</table>
-
-### Model runs 3 and 4 - Flexible orientation 
-
-Figure panel 3 shows _run\_3_ and _run\_4_ (see Table 1). The runs differ in the extended perception of the walkers (see Table 1). Clearly visible are the clearly curved and spread out trampling paths between the target points for walking frequencies greater than the _min-poplimit_ threshold. The variability of the main pattern is particularly noticeable in _run\_3_. Here the range of the _walker-vis-dist_ is with 25 significantly more limited than in _run\_4_ (50). Therefore, the resulting patterns are more dependent on the initial distribution of the actors. In _run\_4_ this pattern is visibly more stable and independent of the initial distribution of actors in the room, thanks to the greater range of the _walker-vis-dist_. The distribution of the _popularity_ values is also clearly visible. Unlike before, it shows an accumulation of patches in the first 3 deciles and then decreases quasi exponentially. The strong left-skewed distribution is caused by the spreading of the paths and the resulting slow increase of patches with higher popularity.
-
-![model runs 3 and 4]( images/abb3.png)
-
-Figure 3: Model run 3 and 4 for the settings see table 1 Black patches have been entered _equal to min-poplimit_ frequently. _bigger min-poplimit_ the color magenta to white is scaled according to the _maximum-popularity_ value range.
-
-
-
-
-### model runs 5 - 7 - focused orientation on maximum popularity 
-
-Figure 4: Model run 5 -7 for the settings see table 1. black patches have _= min-poplimit_ been entered frequently Larger _min-poplimit_ the color magenta to white is scaled according to the value range from _maximum-popularity_.
-
-## Discussion
-
-If the results are considered against the background of the hypotheses made, the following conclusions can be drawn: 
-
-Hypothesis 1 was examined with the model runs _run\_1, run\_5, run\_6, run\_7_. In _run\_1_ and _run\_5 the perception of maximum popularity was not adjusted, but the perception range of **1** of the walkers, in connection with the target orientation active at each time step, has a comparable effect. The runs run\_6_ and _run\_7_, on the other hand, show clearly linear optimization patterns, which become more visible at medium perceptual range than at higher range. All variants lead to linear and, if necessary for the optimization behavior, parallel path structures, which are optimized short with respect to distance. Consequently, hypothesis 1 can be confirmed with respect to both the short distance and the accumulation of direct point-to-point paths.
-
-With the runs _run\_3_ and _run\_4_ it can be shown that, depending on the number of step patches visible to the actors, curved and wider paths are created. These paths are not optimized with respect to the distance between the target points. Their position in space obviously depends on the random initial distribution of the actors (_run\_3_) and becomes more stable and reproducible with increasing range of perception or number of actors (_run\_4_). On the basis of this observation, hypothesis 2 can also be confirmed, since with increasing perception, the trampling paths converge more strongly and are expanded into shared paths, additional secondary paths and further path structures.
-
-On the basis of these observations it can be concluded that the present model is able to reliably reproduce the structures observed by other authors (cf. Molnar 1997, Helbing 1997) and appears suitable as a basis for further questions such as barriers or more complex spatial structures.
-
 
 
 ## References 
