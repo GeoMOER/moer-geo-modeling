@@ -1,7 +1,8 @@
 ---
 title: "Evaluation Guide"
-toc: true
+toc: yes
 toc_label: In this info
+output: word_document
 ---
 
 Criteria for the preparation and assessment of **project work** in modules of the regular BS/L3 course of study at the Department of Geography, Philipps-Universität Marburg
